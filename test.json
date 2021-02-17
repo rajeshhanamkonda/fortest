@@ -1,0 +1,21 @@
+{
+  "builders": [
+{
+    "type": "amazon-ebs",
+    "access_key": "AKIAXQ53OW4XW2KWPAX7",
+    "secret_key": "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",
+    "region": "us-east-2",
+    "source_ami": "ami-08cec7c429219e339",
+    "instance_type": "t2.micro",
+    "ssh_username": "ubunutu",
+    "ami_name": "packernewami"
+  }
+],
+ 
+  "provisioners": [
+  {
+    "type": "shell",
+    "inline": ["sudo apt-get update","sudo apt-get install -f -y nginx"]
+  }
+ ]
+}
